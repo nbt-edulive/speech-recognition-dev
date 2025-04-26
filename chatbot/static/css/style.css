@@ -1,0 +1,166 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.chat-container {
+    height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    position: relative;
+}
+.user-message {
+    background-color: #007bff;
+    color: white;
+    margin-left: auto;
+}
+.assistant-message {
+    background-color: #e9ecef;
+    color: #212529;
+    margin-right: auto;
+}
+.message-time {
+    font-size: 0.7rem;
+    color: #6c757d;
+    position: absolute;
+    bottom: -18px;
+}
+.user-message .message-time {
+    right: 5px;
+}
+.assistant-message .message-time {
+    left: 5px;
+}
+.controls {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.record-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.record-btn:hover {
+    transform: scale(1.1);
+}
+.record-btn.recording {
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.sidebar {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    height: 100%;
+}
+.session-list {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.session-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+.session-item:hover, .session-item.active {
+    background-color: #e9ecef;
+}
+.session-item .delete-btn {
+    display: none;
+    float: right;
+    color: #dc3545;
+    font-size: 18px;
+}
+.session-item:hover .delete-btn {
+    display: block;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.status-indicator {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+.audio-controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.audio-controls button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+#new-session-btn {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.empty-state {
+    padding: 30px;
+    text-align: center;
+}
+.empty-state h4 {
+    margin-bottom: 15px;
+    color: #6c757d;
+}
+.text-input-area {
+    margin-top: 15px;
+}
+.text-input-area .input-group {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+#text-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 12px;
+    font-size: 16px;
+}
+#send-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
