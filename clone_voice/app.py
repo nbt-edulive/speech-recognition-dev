@@ -242,5 +242,5 @@ def api_tts():
             os.remove(voice_file_path)
 
 if __name__ == '__main__':
-    # Chạy ứng dụng Flask trên cổng 9322
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Chạy ứng dụng Flask trên cổng 9321
+    app.run(host='0.0.0.0', port=9321, debug=True)
