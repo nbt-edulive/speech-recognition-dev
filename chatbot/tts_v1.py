@@ -50,6 +50,8 @@ class TextToSpeech:
         # Danh sách giọng mẫu có sẵn
         self.voices = {
             "vi_female": "model/vi_sample.wav",
+            "nbt": "voices/nbt_voice.wav",
+            "seren": "voices/Seren2.wav",
             # Thêm các giọng mẫu khác ở đây
         }
         
@@ -333,12 +335,3 @@ class TextToSpeech:
         except Exception as e:
             print(f"Lỗi khi chuyển đổi text to speech: {str(e)}")
             return None
-
-# Ví dụ sử dụng:
-if __name__ == "__main__":
-    tts = TextToSpeech(model_path="model")
-    output_file = tts.text_to_speech(
-        text="1 + 1 có phải bằng 1000 không?, hãy trả lời câu hỏi này giúp tôi nhé",
-        language="vietnamese"
-    )
-    print(f"Đã tạo file âm thanh: {output_file}")
